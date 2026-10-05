@@ -1,0 +1,134 @@
+STITCH DESIGN BRIEF — EcoTrack (Campus Waste Management)
+==========================================================
+
+Paste everything below the line into Stitch.
+
+----------------------------------------------------------
+
+Design a clean, modern, mobile-first responsive web app called "EcoTrack" for a university campus sustainability initiative (Daffodil International University, Bangladesh). Students report waste bins that are full or damaged, and anyone can view and track the reports on a dashboard.
+
+The app has only 2 screens, a shared navbar and a footer. Design BOTH screens for mobile (360px) and desktop (1280px).
+
+----------------------------------------------------------
+1. PRODUCT & TONE
+----------------------------------------------------------
+- Friendly, trustworthy, eco-conscious, simple. Not corporate, not childish.
+- Audience: university students using phones, often one-handed and in a hurry.
+- The main action (submitting a report) must take under 15 seconds.
+
+----------------------------------------------------------
+2. VISUAL STYLE
+----------------------------------------------------------
+- Light theme, airy, lots of whitespace, soft shadows, rounded corners (12-16px cards, 8-10px inputs and buttons).
+- Primary color: fresh green (around #16A34A, with a darker hover shade around #15803D and a very light tint around #F0FDF4 for backgrounds).
+- Neutral: slate/gray scale for text and borders (text #0F172A / #475569, borders #E2E8F0, page background #F8FAFC, cards white).
+- Issue-type accent colors (used for badges, always with text label, never color alone):
+  - Full = amber (#F59E0B on light amber background)
+  - Damaged = red (#DC2626 on light red background)
+  - Overflowing = orange (#EA580C on light orange background)
+- Status colors: Open = slate/blue-gray badge, Resolved = green badge.
+- Icons: simple line icons (Lucide style). Examples: trash bin, map pin, clock, check-circle, globe/language, plus.
+- No photos, no stock images, no copyrighted logos. Use a simple leaf or recycle-bin icon as the logo mark next to the "EcoTrack" wordmark.
+- WCAG AA contrast, visible focus rings (green), touch targets at least 44px tall.
+
+----------------------------------------------------------
+3. TYPOGRAPHY (must support BANGLA and ENGLISH)
+----------------------------------------------------------
+- Latin font: Inter (or a similar clean sans-serif).
+- Bangla font: Noto Sans Bengali (or Hind Siliguri).
+- Both scripts must look balanced together. Bangla needs slightly more line-height (about 1.6-1.7) than English (about 1.5).
+- Scale: page title 28-32px bold, section/card title 18-20px semibold, body 16px, small/meta 13-14px.
+
+----------------------------------------------------------
+4. SHARED LAYOUT
+----------------------------------------------------------
+NAVBAR (sticky, white, subtle bottom border):
+- Left: leaf/bin logo mark + "EcoTrack"
+- Center/right (desktop): two links, "Report" and "Dashboard", active link shown with green text and a green underline or pill
+- Right: LANGUAGE SWITCHER as a compact segmented toggle with two options: "EN" and "বাংলা" (active option filled green with white text)
+- Mobile (360px): logo left, language toggle right, and the two links as a bottom tab bar or a second row of tabs so they stay thumb-reachable
+
+FOOTER: small muted line, "EcoTrack · Daffodil International University", centered.
+
+Content is centered with a max width of about 1024px on desktop and 16px side padding on mobile.
+
+----------------------------------------------------------
+5. SCREEN 1 — REPORT PAGE
+----------------------------------------------------------
+Top: page title "Report a Bin" and a one-line subtitle, e.g. "Help keep our campus clean by reporting full or damaged bins."
+
+A single white form card (max width ~560px on desktop, full width on mobile) containing:
+1. Location — labeled dropdown (select). Placeholder "Select location". Options: Library, Cafeteria, Dorms. Map-pin icon inside the field.
+2. Issue Type — labeled choice. Design it as 3 large selectable option cards or pills (Full, Damaged, Overflowing), each with a small icon and its accent color when selected. On mobile they stack or wrap.
+3. Note (optional) — labeled textarea, placeholder "Add any details (optional)", small character counter, optional tag next to the label.
+4. Submit button — full-width on mobile, primary green, label "Submit Report".
+
+Also design these STATES for this screen:
+- Default (empty form)
+- Validation error: red helper text under the dropdown and issue type ("Please select a location", "Please select an issue type"), red border on the invalid field
+- Success: green success banner above or inside the card with a check icon, text "Report submitted. Thank you!", and a secondary link/button "View dashboard"
+
+----------------------------------------------------------
+6. SCREEN 2 — DASHBOARD PAGE
+----------------------------------------------------------
+Top: page title "Reports Dashboard" and a short subtitle.
+
+Stats row (2 cards side by side, also side by side on mobile):
+- "Total Reports" with a big number
+- "Resolved Reports" with a big number (green accent)
+
+Reports list below, newest first. Each REPORT CARD contains:
+- Location with map-pin icon (bold), e.g. "Library"
+- Issue type colored badge (Full / Damaged / Overflowing)
+- Status badge (Open / Resolved)
+- Time of report with clock icon, e.g. "5 Oct 2026, 3:42 PM"
+- Optional note text (muted, up to 2-3 lines)
+- Action button on the right (desktop) or bottom (mobile): "Mark as Resolved" (outlined green). When resolved, it becomes "Reopen" (ghost/gray) and the card looks calmer (muted background, green left border or check icon).
+Desktop: a 2-column card grid or a clean list. Mobile: single column.
+
+Also design these STATES:
+- Populated (about 4-5 sample cards mixing all 3 locations, all 3 issue types, both statuses)
+- Empty state: large soft icon (empty bin or leaf), message "No reports yet", supporting text, and a primary button "Report a Bin"
+
+----------------------------------------------------------
+7. BILINGUAL DESIGN REQUIREMENTS
+----------------------------------------------------------
+- Every label, button, badge, message and placeholder exists in English and Bangla. Layouts must not break when Bangla text is longer or taller.
+- Show the Bangla version of BOTH screens as well (or at minimum the Report page and Dashboard page in Bangla). Use these Bangla strings:
+  - EcoTrack — ইকোট্র্যাক
+  - Report — রিপোর্ট
+  - Dashboard — ড্যাশবোর্ড
+  - Report a Bin — বর্জ্যপাত্রের সমস্যা জানান
+  - Location — অবস্থান
+  - Select location — অবস্থান নির্বাচন করুন
+  - Library — লাইব্রেরি
+  - Cafeteria — ক্যাফেটেরিয়া
+  - Dorms — ডরমিটরি
+  - Issue Type — সমস্যার ধরন
+  - Full — পূর্ণ
+  - Damaged — ক্ষতিগ্রস্ত
+  - Overflowing — উপচে পড়ছে
+  - Note (optional) — নোট (ঐচ্ছিক)
+  - Submit Report — রিপোর্ট জমা দিন
+  - Total Reports — মোট রিপোর্ট
+  - Resolved Reports — সমাধান হয়েছে
+  - Mark as Resolved — সমাধান হিসেবে চিহ্নিত করুন
+  - Reopen — আবার খুলুন
+  - Open — চলমান
+  - Resolved — সমাধান হয়েছে
+  - No reports yet — এখনো কোনো রিপোর্ট নেই
+- When in Bangla, numbers can be shown in Bangla digits (০১২৩৪৫৬৭৮৯).
+
+----------------------------------------------------------
+8. OUTPUT REQUESTED
+----------------------------------------------------------
+1. High-fidelity designs: Report page and Dashboard page, mobile + desktop, English + Bangla, including the states listed above.
+2. A DESIGN.md design-system file that includes: color tokens (with hex), typography (fonts, sizes, weights, line-heights), spacing scale, border radius, shadows, component specs (navbar, language toggle, form fields, issue-type selector, buttons, badges, stat cards, report card, empty state, banners), and responsive breakpoints.
+3. Express all tokens so they map cleanly to TailwindCSS utility classes (use Tailwind's default scale where possible, for example green-600, slate-700, rounded-xl, shadow-sm), so a coding agent can implement the design without guessing.
+
+----------------------------------------------------------
+9. CONSTRAINTS
+----------------------------------------------------------
+- Frontend-only web app. Do not design login, sign-up, maps, charts, image uploads or any extra screens.
+- Do not add features beyond what is described above.
+- Keep the design simple enough to be built in about 60 minutes with React and Tailwind.
